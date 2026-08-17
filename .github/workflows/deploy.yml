@@ -29,18 +29,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Replace low-resolution images with HD assets
+      - name: Replace images with selected HD assets
         shell: bash
         run: |
           set -e
-          curl -fL "https://images.pexels.com/photos/37308623/pexels-photo-37308623.jpeg?cs=srgb&dl=pexels-pexels-user-2159008650-37308623.jpg&fm=jpg" -o src/assets/hero.jpg
-          curl -fL "https://images.pexels.com/photos/7679461/pexels-photo-7679461.jpeg?cs=srgb&dl=pexels-mart-production-7679461.jpg&fm=jpg" -o src/assets/vestidos.jpg
-          curl -fL "https://images.pexels.com/photos/5424907/pexels-photo-5424907.jpeg?cs=srgb&dl=pexels-arina-krasnikova-5424907.jpg&fm=jpg" -o src/assets/conjuntos.jpg
-          curl -fL "https://images.pexels.com/photos/8989866/pexels-photo-8989866.jpeg?cs=srgb&dl=pexels-a-darmel-8989866.jpg&fm=jpg" -o src/assets/blusas.jpg
-          curl -fL "https://images.pexels.com/photos/5418929/pexels-photo-5418929.jpeg?cs=srgb&dl=pexels-arina-krasnikova-5418929.jpg&fm=jpg" -o src/assets/calcas.jpg
-          curl -fL "https://images.pexels.com/photos/37308627/pexels-photo-37308627.jpeg?cs=srgb&dl=pexels-pexels-user-2159008650-37308627.jpg&fm=jpg" -o src/assets/lookA.jpg
-          curl -fL "https://images.pexels.com/photos/11890760/pexels-photo-11890760.jpeg?cs=srgb&dl=pexels-dasha-horoshaya-218646645-11890760.jpg&fm=jpg" -o src/assets/lookB.jpg
-          curl -fL "https://images.pexels.com/photos/26292713/pexels-photo-26292713.jpeg?cs=srgb&dl=pexels-noon-26292713.jpg&fm=jpg" -o src/assets/loja.jpg
+          curl -fL "https://images.pexels.com/photos/5531549/pexels-photo-5531549.jpeg?auto=compress&cs=tinysrgb&w=1800" -o src/assets/hero.jpg
+          curl -fL "https://images.pexels.com/photos/10406624/pexels-photo-10406624.jpeg?auto=compress&cs=tinysrgb&w=1400" -o src/assets/vestidos.jpg
+          curl -fL "https://images.pexels.com/photos/8205479/pexels-photo-8205479.jpeg?auto=compress&cs=tinysrgb&w=1400" -o src/assets/conjuntos.jpg
+          curl -fL "https://images.pexels.com/photos/26607751/pexels-photo-26607751.jpeg?auto=compress&cs=tinysrgb&w=1400" -o src/assets/blusas.jpg
+          curl -fL "https://images.pexels.com/photos/31400265/pexels-photo-31400265.jpeg?auto=compress&cs=tinysrgb&w=1400" -o src/assets/calcas.jpg
+          curl -fL "https://images.pexels.com/photos/16928176/pexels-photo-16928176.jpeg?auto=compress&cs=tinysrgb&w=1600" -o src/assets/lookA.jpg
+          curl -fL "https://images.pexels.com/photos/11413723/pexels-photo-11413723.jpeg?auto=compress&cs=tinysrgb&w=1600" -o src/assets/lookB.jpg
+          curl -fL "https://images.pexels.com/photos/32549960/pexels-photo-32549960.jpeg?auto=compress&cs=tinysrgb&w=1800" -o src/assets/loja.jpg
 
       - name: Build static site
         run: npm run build
