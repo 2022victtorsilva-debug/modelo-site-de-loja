@@ -29,17 +29,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Restore existing HD images
+      - name: Apply selected portfolio images
         shell: bash
         run: |
           set -e
-          curl -fL "https://images.pexels.com/photos/7679461/pexels-photo-7679461.jpeg?cs=srgb&dl=pexels-mart-production-7679461.jpg&fm=jpg" -o src/assets/vestidos.jpg
-          curl -fL "https://images.pexels.com/photos/5424907/pexels-photo-5424907.jpeg?cs=srgb&dl=pexels-arina-krasnikova-5424907.jpg&fm=jpg" -o src/assets/conjuntos.jpg
-          curl -fL "https://images.pexels.com/photos/8989866/pexels-photo-8989866.jpeg?cs=srgb&dl=pexels-a-darmel-8989866.jpg&fm=jpg" -o src/assets/blusas.jpg
-          curl -fL "https://images.pexels.com/photos/5418929/pexels-photo-5418929.jpeg?cs=srgb&dl=pexels-arina-krasnikova-5418929.jpg&fm=jpg" -o src/assets/calcas.jpg
-          curl -fL "https://images.pexels.com/photos/37308627/pexels-photo-37308627.jpeg?cs=srgb&dl=pexels-pexels-user-2159008650-37308627.jpg&fm=jpg" -o src/assets/lookA.jpg
-          curl -fL "https://images.pexels.com/photos/11890760/pexels-photo-11890760.jpeg?cs=srgb&dl=pexels-dasha-horoshaya-218646645-11890760.jpg&fm=jpg" -o src/assets/lookB.jpg
-          curl -fL "https://images.pexels.com/photos/26292713/pexels-photo-26292713.jpeg?cs=srgb&dl=pexels-noon-26292713.jpg&fm=jpg" -o src/assets/loja.jpg
+          base64 -d src/assets/hero.b64 > src/assets/hero.jpg
+          curl -fL "https://images.pexels.com/photos/12208801/pexels-photo-12208801.jpeg?cs=srgb&dl=pexels-kelvinocta16-12208801.jpg&fm=jpg" -o src/assets/vestidos.jpg
+          curl -fL "https://images.pexels.com/photos/9168240/pexels-photo-9168240.jpeg?cs=srgb&dl=pexels-cottonbro-9168240.jpg&fm=jpg" -o src/assets/conjuntos.jpg
+          curl -fL "https://images.pexels.com/photos/17879064/pexels-photo-17879064.jpeg?cs=srgb&dl=pexels-nur-demirbas-627769864-17879064.jpg&fm=jpg" -o src/assets/blusas.jpg
+          curl -fL "https://images.pexels.com/photos/8948833/pexels-photo-8948833.jpeg?cs=srgb&dl=pexels-soulofmurcidus-8948833.jpg&fm=jpg" -o src/assets/calcas.jpg
+          curl -fL "https://images.pexels.com/photos/4428045/pexels-photo-4428045.jpeg?cs=srgb&dl=pexels-august-de-richelieu-4428045.jpg&fm=jpg" -o src/assets/lookA.jpg
+          curl -fL "https://images.pexels.com/photos/18532851/pexels-photo-18532851.jpeg?cs=srgb&dl=pexels-mauricio-casas-454804780-18532851.jpg&fm=jpg" -o src/assets/lookB.jpg
+          curl -fL "https://images.pexels.com/photos/7618822/pexels-photo-7618822.jpeg?cs=srgb&dl=pexels-humeyradmrc-7618822.jpg&fm=jpg" -o src/assets/loja.jpg
 
       - name: Build static site
         run: npm run build
