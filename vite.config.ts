@@ -6,5 +6,18 @@ import { nitro } from "nitro/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [tsConfigPaths(), tailwindcss(), tanstackStart(), nitro(), viteReact()],
+  base: "/modelo-site-de-loja/",
+  plugins: [
+    tsConfigPaths(),
+    tailwindcss(),
+    tanstackStart({
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
+        failOnError: true,
+      },
+    }),
+    nitro(),
+    viteReact(),
+  ],
 });
