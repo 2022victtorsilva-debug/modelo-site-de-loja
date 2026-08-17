@@ -33,7 +33,6 @@ jobs:
         shell: bash
         run: |
           set -e
-          base64 -d src/assets/hero.b64 > src/assets/hero.jpg
           curl -fL "https://images.pexels.com/photos/12208801/pexels-photo-12208801.jpeg?cs=srgb&dl=pexels-kelvinocta16-12208801.jpg&fm=jpg" -o src/assets/vestidos.jpg
           curl -fL "https://images.pexels.com/photos/9168240/pexels-photo-9168240.jpeg?cs=srgb&dl=pexels-cottonbro-9168240.jpg&fm=jpg" -o src/assets/conjuntos.jpg
           curl -fL "https://images.pexels.com/photos/17879064/pexels-photo-17879064.jpeg?cs=srgb&dl=pexels-nur-demirbas-627769864-17879064.jpg&fm=jpg" -o src/assets/blusas.jpg
