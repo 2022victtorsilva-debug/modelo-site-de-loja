@@ -1,5 +1,6 @@
 name: Deploy Vitta Moda to GitHub Pages
 
+# Trigger de republicacao apos trocar a fonte do GitHub Pages para Actions.
 on:
   push:
     branches: ["main"]
